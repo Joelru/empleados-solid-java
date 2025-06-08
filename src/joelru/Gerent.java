@@ -1,15 +1,15 @@
-public class Diseñador extends Employed implements payBonifice, Sueldo {
+package joelru;
 
-    int bonific = 2;
-
-    public Diseñador(String name, int age, int experience, int workDays) {
+public class Gerent extends Employed implements Sueldo, payBonifice {
+    public Gerent(String name, int age, int experience, int workDays) {
         super(name, age, experience, workDays);
     }
+    int bonific = 25;
 
     @Override
     public int payBonifice(int sueldB) {
         if (workDays > 20) {
-            sueldB = bonific + workDays + sueldB+ experience;
+            sueldB = bonific + workDays + sueldB+ experience;;
         }
         return sueldB;
     }
